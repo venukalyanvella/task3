@@ -1,0 +1,24 @@
+
+
+.panel
+{
+    display: block;
+    border-radius: 15px;
+    box-shadow: 2px 1px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: royalblue;
+    width: 450px; height: auto;
+}
+
+.panel-head{
+    margin: auto;
+
+}
+.panel-body{
+    color: #fff;
+}
+.weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+     
+}

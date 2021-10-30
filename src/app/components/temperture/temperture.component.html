@@ -1,0 +1,22 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form >
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="farenheit">Farenheit</label>
+                        <input type="number" class="form-control" name="faren"  [(ngModel)]="faren" placeholder="enter" required>
+                        <button class="btn btn-primary" (click)="getCelcius(faren)"> Convert to Celcius</button>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="celcius">Celcius</label>
+                        <input type="number" class="form-control" name="celcius"  [(ngModel)]="celcius" placeholder="celcius" required>
+                        <button (click)="getFahren(celcius)" class="btn btn-primary" > Convert to Farenhiet</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

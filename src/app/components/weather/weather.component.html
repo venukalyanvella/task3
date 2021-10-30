@@ -1,0 +1,55 @@
+<div class="container" >
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="panel">
+                <div class="panel-title  mt-5">
+                    <form >
+                        <div class="form-group">
+                            <select name="city" (change)="checkWeather($event.target.value)" class="form-control mx-auto w-50 text-center"  id="city">
+                                <option value="null" disabled >Select city</option>
+                                <option value="{{item}}" *ngFor="let item of cities">{{item}}</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-body">
+                    <!-- //weather Details of a city -->
+                    <div class="weather">
+                        <div>
+                            <img [src]="weather.icon" width="150" height="150" alt="icon of weather">
+                            <p> {{weather.city}} </p>
+                        </div>
+                        <div>
+                            <p >Temperature : <span class="fa fa-temperature-high"></span> {{weather.temperature}} C</p>
+                            <p> Condition : <span class="fa fa-wind"> </span> {{weather.condition}} </p>
+                            <p> Humidity: {{weather.humidity}} </p>
+                            <p> Pressure: {{weather.pressure}}  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="weather" *ngIf="false">
+    <div class="weatherDay far fa-calendar-alt"></div>
+  <div class="city fas fa-map-marker-alt">
+  </div>
+  <div class="clearing"></div>
+  <hr>
+  <div class="centerBlock">
+  <div class="weatherInfo weatherLogo">
+  </div>
+  <div class="weatherInfo weatherTemp fas fa-temperature-high">
+ </div>
+
+</div>
+  <hr> 
+  <div class="weatherDetails">
+    <div class="wind fas fa-wind"></div>
+    <div class="wetness fas fa-tint"></div>
+    <div class="athmosphere fas fa-tachometer-alt"></div>
+  </div>
+</div>
